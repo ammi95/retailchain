@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailChain Analytics Portal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/"><img src="assets/images/logo.png" alt=""></a>
+            </div>
+
+            <!-- Nav Links -->
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#solution">About</a>
+                <a href="#showcase">Dashboard</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">contact</a>
+                <div class="nav-actions mobile-cta">
+                    <a href="login.html" class="login">Login</a>
+                    <a href="javacript:void(0)" class="btn-primary" onclick="openModal()">Request demo</a>
+                </div>
+            </nav>
+
+            <!-- Right Buttons -->
+            <div class="nav-actions">
+                <a href="javacript:void(0)" class="btn-primary" onclick="openModal()">Request demo</a>
+                <a href="login.html" class="login">Login</a>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div>
+
+        </div>
+    </header>
+
+    <!-- hero banner -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+
+        <div class="hero-content">
+            <p class="badge">Retail Intelligence Platform</p>
+            <h1>
+                Real-Time Retail Intelligence <br />
+                Across Every Store
+            </h1>
+
+            <p class="subheading">
+                Track sales, monitor inventory, and optimize promotions across your
+                entire retail network — all from one powerful dashboard.
+            </p>
+
+            <div class="hero-cta">
+                <a href="javascript:void(0)" class="btn primary" onclick="openModel()">Get Live Demo</a>
+                <a href="login.html" class="btn secondary">View Dashboard</a>
+            </div>
+        </div>
+
+        <!-- Floating Cards -->
+        <div class="hero-visuals">
+            <div class="card card-1">📊 Sales +24%</div>
+            <div class="card card-2">📦 Low Stock Alert</div>
+            <div class="card card-3">🔥 Promo Impact</div>
+        </div>
+    </section>
+    <!-- about section -->
+    <section class="about" id="solution">
+        <div class="about-container">
+
+            <!-- Heading -->
+            <div class="about-header">
+                <p class="section-tag">Overview</p>
+                <h2>Smarter Decisions for Multi-Store Retail</h2>
+                <p class="about-desc">
+                    Oritenga’s RetailChain Analytics Portal transforms raw retail data into actionable insights.
+                    By integrating data from hundreds of stores, it provides real-time visibility into sales
+                    performance,
+                    inventory health, and promotional impact.
+                </p>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="about-cards">
+                <div class="about-card">
+                    <h3>📊 Unified Data</h3>
+                    <p>All store data centralized into one powerful analytics platform.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>⚡ Real-Time Insights</h3>
+                    <p>Live dashboards for sales, stock, and promotions across regions.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>🎯 Actionable Intelligence</h3>
+                    <p>Make faster decisions with clear, data-driven recommendations.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- features -->
+    <section class="features" id="features">
+        <div class="features-container">
+
+            <!-- Header -->
+            <div class="features-header">
+                <p class="section-tag">Features</p>
+                <h2>Powerful Analytics for Smarter Retail Decisions</h2>
+            </div>
+
+            <!-- Timeline -->
+            <div class="features-timeline">
+
+                <!-- Item 1 -->
+                <div class="feature-item left">
+                    <div class="feature-card">
+                        <h3>📊 Real-Time Sales Insights</h3>
+                        <p>Track performance by region, store, or product with live dashboards.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="feature-item right">
+                    <div class="feature-card">
+                        <h3>📦 Inventory Intelligence</h3>
+                        <p>Identify stock shortages, slow-moving items, and demand patterns instantly.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="feature-item left">
+                    <div class="feature-card">
+                        <h3>🎯 Promotion Analytics</h3>
+                        <p>Measure campaign success with before vs after comparisons.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="feature-item right">
+                    <div class="feature-card">
+                        <h3>🔐 Role-Based Dashboards</h3>
+                        <p>Custom views for Store Managers, Regional Heads, and HQ Teams.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- dashborad -->
+    <section class="showcase" id="showcase">
+        <div class="showcase-container">
+
+            <!-- Header -->
+            <div class="showcase-header">
+                <p class="section-tag">Dashboard Preview</p>
+                <h2>Visualize Your Entire Retail Ecosystem</h2>
+            </div>
+
+            <!-- Grid -->
+            <div class="showcase-grid">
+
+                <!-- Card 1 -->
+                <div class="showcase-card large">
+                    <img src="assets/images/dashboard-main.png" alt="Main Dashboard">
+                    <div class="overlay">
+                        <h3>Main BI Dashboard</h3>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="showcase-card">
+                    <img src="assets/images/inventory-heatmap.png" alt="Inventory Heatmap">
+                    <div class="overlay">
+                        <h3>Inventory Heatmap</h3>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="showcase-card">
+                    <img src="assets/images/promo-panel.png" alt="Promotion Panel">
+                    <div class="overlay">
+                        <h3>Promotion Effect Panel</h3>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="showcase-card wide">
+                    <img src="assets/images/mobile-view.png" alt="Mobile View">
+                    <div class="overlay">
+                        <h3>Mobile BI View</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- flow diagram -->
+    <section class="dataflow">
+        <div class="dataflow-container">
+
+            <!-- Header -->
+            <div class="dataflow-header">
+                <p class="section-tag">Data Flow</p>
+                <h2>From Store to Insight — Seamlessly</h2>
+                <p class="dataflow-desc">
+                    Automated pipelines ensure clean, reliable, and up-to-date data across all reporting layers.
+                </p>
+            </div>
+
+            <!-- Flow -->
+            <div class="flow-wrapper">
+
+                <div class="flow-step">
+                    <div class="icon">🛒</div>
+                    <p>POS Systems</p>
+                </div>
+
+                <div class="flow-line"></div>
+
+                <div class="flow-step">
+                    <div class="icon">⚙️</div>
+                    <p>ETL Pipelines</p>
+                </div>
+
+                <div class="flow-line"></div>
+
+                <div class="flow-step">
+                    <div class="icon">🗄️</div>
+                    <p>Data Warehouse</p>
+                </div>
+
+                <div class="flow-line"></div>
+
+                <div class="flow-step highlight">
+                    <div class="icon">📊</div>
+                    <p>BI Dashboard</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- impact section -->
+    <section class="impact">
+        <div class="impact-container">
+
+            <!-- Header -->
+            <div class="impact-header">
+                <p class="section-tag">Impact</p>
+                <h2>Real Business Impact</h2>
+            </div>
+
+            <!-- Stats -->
+            <div class="impact-grid">
+
+                <div class="impact-card">
+                    <h3>⏱</h3>
+                    <h4>Days → Minutes</h4>
+                    <p>Reporting time drastically reduced</p>
+                </div>
+
+                <div class="impact-card">
+                    <h3>📦</h3>
+                    <h4>+35%</h4>
+                    <p>Improved stock availability</p>
+                </div>
+
+                <div class="impact-card">
+                    <h3>📊</h3>
+                    <h4>Faster Decisions</h4>
+                    <p>Real-time insights across teams</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- roles -->
+    <section class="roles">
+        <div class="roles-container">
+
+            <!-- Header -->
+            <div class="roles-header">
+                <p class="section-tag">User Roles</p>
+                <h2>Tailored for Every Role</h2>
+            </div>
+
+            <div class="roles-layout">
+
+                <!-- LEFT: Tabs -->
+                <div class="roles-tabs">
+
+                    <div class="role-tab active" data-role="store">
+                        🧑‍💼 Store Manager
+                    </div>
+
+                    <div class="role-tab" data-role="regional">
+                        📍 Regional Manager
+                    </div>
+
+                    <div class="role-tab" data-role="hq">
+                        🏢 HQ / Leadership
+                    </div>
+
+                </div>
+
+                <!-- RIGHT: Content -->
+                <div class="roles-content">
+
+                    <div class="role-content active" id="store">
+                        <h3>Store-Level Intelligence</h3>
+                        <p>Track daily sales, monitor stock levels, and get instant alerts for low inventory.</p>
+                        <div class="preview">📊 Live Sales + Stock Alerts UI</div>
+                    </div>
+
+                    <div class="role-content" id="regional">
+                        <h3>Multi-Store Visibility</h3>
+                        <p>Compare store performance across regions and identify trends instantly.</p>
+                        <div class="preview">📍 Regional Performance Dashboard</div>
+                    </div>
+
+                    <div class="role-content" id="hq">
+                        <h3>Strategic Insights</h3>
+                        <p>Access forecasting, promotions impact, and company-wide analytics.</p>
+                        <div class="preview">🏢 Executive BI Dashboard</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1: Brand -->
+            <div class="footer-col brand">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="logo">
+                </div>
+                <p>
+                    Oritenga delivers real-time retail analytics, helping businesses make smarter decisions
+                    across sales, inventory, and promotions.
+                </p>
+
+                <div class="socials">
+                    <a href="#">🌐</a>
+                    <a href="#">💼</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#solution">About</a>
+                <a href="#showcase">Dashboards</a>
+                <!-- <a href="#">Blog</a> -->
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Product</h4>
+                <a href="#features">Features</a>
+                <a href="pricing.html">Pricing</a>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Support</a>
+                <!-- <a href="#">Privacy Policy</a> -->
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>© 2026 Oritenga. All rights reserved</p>
+        </div>
+    </footer>
+    <div class="modal" id="demoModal">
+
+        <div class="modal-content" id="modalBox">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Request a Demo</h2>
+
+            <form id="demoForm">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Farm Size / Location">
+
+                <p class="" id="formError"></p>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

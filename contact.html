@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RetailChain Analytics Portal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/"><img src="assets/images/logo.png" alt=""></a>
+            </div>
+
+            <!-- Nav Links -->
+            <nav class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#solution">About</a>
+                <a href="/#showcase">Dashboard</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">contact</a>
+                <div class="nav-actions mobile-cta">
+                    <a href="login.html" class="login">Login</a>
+                    <a href="javacript:void(0)" class="btn-primary" onclick="openModal()">Request demo</a>
+                </div>
+            </nav>
+
+            <!-- Right Buttons -->
+            <div class="nav-actions">
+                <a href="javacript:void(0)" class="btn-primary" onclick="openModal()">Request demo</a>
+                <a href="login.html" class="login">Login</a>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div>
+
+        </div>
+    </header>
+    <section class="contact">
+
+        <!-- Background Glow -->
+        <div class="bg-blur"></div>
+
+        <div class="contact-wrapper">
+
+            <!-- LEFT -->
+            <div class="contact-left">
+                <h1>Let’s Talk 👋</h1>
+                <p>We’d love to hear from you. Send us a message and we’ll respond quickly.</p>
+
+                <div class="contact-details">
+                    <div>📧 support@harvestpredict.com</div>
+                    <div>📍 India</div>
+                </div>
+                <div class="contact-extra">
+                    <div style="margin-bottom: 10px;">📞 +91 98765 43210</div>
+                    <div>🕒 Mon - Fri: 9 AM - 6 PM</div>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="contact-card">
+                <form id="contactForm">
+
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label>Full Name</label>
+                        <span class="error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label>Email Address</label>
+                        <span class="error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="message" required></textarea>
+                        <label>Your Message</label>
+                        <span class="error"></span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <span class="loader"></span>
+                    </button>
+
+                    <div id="successMsg"></div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <div class="contact-map">
+        <iframe src="https://www.google.com/maps?q=India&output=embed" loading="lazy">
+        </iframe>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1: Brand -->
+            <div class="footer-col brand">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="logo">
+                </div>
+                <p>
+                    Oritenga delivers real-time retail analytics, helping businesses make smarter decisions
+                    across sales, inventory, and promotions.
+                </p>
+
+                <div class="socials">
+                    <a href="#">🌐</a>
+                    <a href="#">💼</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="/#solution">About</a>
+                <a href="/#showcase">Dashboards</a>
+                <!-- <a href="#">Blog</a> -->
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Product</h4>
+                <a href="/#features">Features</a>
+                <a href="pricing.html">Pricing</a>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Support</a>
+                <!-- <a href="#">Privacy Policy</a> -->
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>© 2026 Oritenga. All rights reserved</p>
+        </div>
+    </footer>
+    <div class="modal" id="demoModal">
+
+        <div class="modal-content" id="modalBox">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Request a Demo</h2>
+
+            <form id="demoForm">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Farm Size / Location">
+
+                <p class="" id="formError"></p>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        const contactform = document.getElementById("contactForm");
+        const loader = document.querySelector(".loader");
+        const btnText = document.querySelector(".btn-text");
+
+        contactform.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let valid = true;
+
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const message = document.getElementById("message");
+            const successMsg = document.getElementById("successMsg");
+
+            document.querySelectorAll(".error").forEach(e => e.innerText = "");
+            successMsg.innerText = "";
+
+            if (name.value.trim() === "") {
+                showError(name, "Required");
+                valid = false;
+            }
+
+            if (!validateEmail(email.value)) {
+                showError(email, "Invalid email");
+                valid = false;
+            }
+
+            if (message.value.trim() === "") {
+                showError(message, "Required");
+                valid = false;
+            }
+
+            if (valid) {
+                btnText.style.opacity = "0.5";
+                loader.style.display = "inline-block";
+
+                setTimeout(() => {
+                    loader.style.display = "none";
+                    btnText.style.opacity = "1";
+
+                    successMsg.innerText = "✅ Message sent successfully!";
+                    contactform.reset();
+                }, 1500);
+            }
+        });
+
+        function showError(input, msg) {
+            input.parentElement.querySelector(".error").innerText = msg;
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+    </script>
+</body>
+
+</html>
