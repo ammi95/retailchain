@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>RetailChain Analytics Portal</title>
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -30,16 +33,16 @@
                 <a href="#solution">About</a>
                 <a href="#showcase">Dashboard</a>
                 <a href="pricing.html">Pricing</a>
-                <a href="contact.html">contact</a>
+                <a href="contact.html">Contact</a>
                 <div class="nav-actions mobile-cta">
                     <a href="login.html" class="login">Login</a>
-                    <a href="javacript:void(0)" class="btn-primary" onclick="openModal()">Request demo</a>
+                    <a href="javacript:void(0)" class="btn-primary openDemo">Request demo</a>
                 </div>
             </nav>
 
             <!-- Right Buttons -->
             <div class="nav-actions">
-                <a href="javacript:void(0)" class="btn-primary" onclick="openModal()">Request demo</a>
+                <a href="javacript:void(0)" class="btn-primary openDemo">Request demo</a>
                 <a href="login.html" class="login">Login</a>
             </div>
 
@@ -68,7 +71,7 @@
             </p>
 
             <div class="hero-cta">
-                <a href="javascript:void(0)" class="btn primary" onclick="openModel()">Get Live Demo</a>
+                <a href="javascript:void(0)" class="btn primary openDemo">Get Live Demo</a>
                 <a href="login.html" class="btn secondary">View Dashboard</a>
             </div>
         </div>
@@ -86,10 +89,10 @@
 
             <!-- Heading -->
             <div class="about-header">
-                <p class="section-tag">Overview</p>
+                <!-- <p class="section-tag">Overview</p> -->
                 <h2>Smarter Decisions for Multi-Store Retail</h2>
                 <p class="about-desc">
-                    Oritenga’s RetailChain Analytics Portal transforms raw retail data into actionable insights.
+                    RetailChain’s RetailChain Analytics Portal transforms raw retail data into actionable insights.
                     By integrating data from hundreds of stores, it provides real-time visibility into sales
                     performance,
                     inventory health, and promotional impact.
@@ -122,7 +125,7 @@
 
             <!-- Header -->
             <div class="features-header">
-                <p class="section-tag">Features</p>
+                <!-- <p class="section-tag">Features</p> -->
                 <h2>Powerful Analytics for Smarter Retail Decisions</h2>
             </div>
 
@@ -171,7 +174,7 @@
 
             <!-- Header -->
             <div class="showcase-header">
-                <p class="section-tag">Dashboard Preview</p>
+                <!-- <p class="section-tag">Dashboard Preview</p> -->
                 <h2>Visualize Your Entire Retail Ecosystem</h2>
             </div>
 
@@ -220,7 +223,7 @@
 
             <!-- Header -->
             <div class="dataflow-header">
-                <p class="section-tag">Data Flow</p>
+                <!-- <p class="section-tag">Data Flow</p> -->
                 <h2>From Store to Insight — Seamlessly</h2>
                 <p class="dataflow-desc">
                     Automated pipelines ensure clean, reliable, and up-to-date data across all reporting layers.
@@ -266,7 +269,7 @@
 
             <!-- Header -->
             <div class="impact-header">
-                <p class="section-tag">Impact</p>
+                <!-- <p class="section-tag">Impact</p> -->
                 <h2>Real Business Impact</h2>
             </div>
 
@@ -301,7 +304,7 @@
 
             <!-- Header -->
             <div class="roles-header">
-                <p class="section-tag">User Roles</p>
+                <!-- <p class="section-tag">User Roles</p> -->
                 <h2>Tailored for Every Role</h2>
             </div>
 
@@ -329,20 +332,35 @@
 
                     <div class="role-content active" id="store">
                         <h3>Store-Level Intelligence</h3>
-                        <p>Track daily sales, monitor stock levels, and get instant alerts for low inventory.</p>
-                        <div class="preview">📊 Live Sales + Stock Alerts UI</div>
+                        <p >📊 Live Sales + Stock Alerts UI</p>
+                        <div class="preview" style="padding: 10px;">
+                            Monitor daily sales performance with real-time updates across all products.
+                            Get instant alerts for low stock and fast-moving items to avoid missed sales.
+                            Track store-level KPIs, revenue trends, and inventory health in one place.
+                            Make quick, data-driven decisions to keep operations running smoothly.
+                        </div>
                     </div>
 
                     <div class="role-content" id="regional">
                         <h3>Multi-Store Visibility</h3>
-                        <p>Compare store performance across regions and identify trends instantly.</p>
-                        <div class="preview">📍 Regional Performance Dashboard</div>
+                        <p>📍 Regional Performance Dashboard</p>
+                        <div class="preview"  style="padding: 10px;">
+                            Compare performance across multiple stores and regions in a single dashboard.
+                            Identify top-performing locations and areas that need attention instantly.
+                            Analyze regional trends, sales patterns, and inventory distribution.
+                            Optimize operations by making informed decisions at a regional level.
+                        </div>
                     </div>
 
                     <div class="role-content" id="hq">
                         <h3>Strategic Insights</h3>
-                        <p>Access forecasting, promotions impact, and company-wide analytics.</p>
-                        <div class="preview">🏢 Executive BI Dashboard</div>
+                        <p>🏢 Executive BI Dashboard</p>
+                        <div class="preview"  style="padding: 10px;">
+                            Access organization-wide analytics with complete visibility across all stores.
+                            Measure promotion effectiveness and forecast demand with advanced insights.
+                            Track key business metrics to support long-term strategic planning.
+                            Empower leadership with accurate, data-driven decision-making tools.
+                        </div>
                     </div>
 
                 </div>
@@ -361,15 +379,9 @@
                     <img src="assets/images/logo.png" alt="logo">
                 </div>
                 <p>
-                    Oritenga delivers real-time retail analytics, helping businesses make smarter decisions
+                    RetailChain delivers real-time retail analytics, helping businesses make smarter decisions
                     across sales, inventory, and promotions.
                 </p>
-
-                <div class="socials">
-                    <a href="#">🌐</a>
-                    <a href="#">💼</a>
-                    <a href="#">🐦</a>
-                </div>
             </div>
 
             <!-- Column 2 -->
@@ -399,30 +411,35 @@
 
         <!-- Bottom Bar -->
         <div class="footer-bottom">
-            <p>© 2026 Oritenga. All rights reserved</p>
+            <p>© 2026 RetailChain. All rights reserved</p>
         </div>
     </footer>
-    <div class="modal" id="demoModal">
+    <div class="demo-overlay" id="demoOverlay"></div>
 
-        <div class="modal-content" id="modalBox">
+    <!-- Side Popup -->
+    <div class="demo-popup" id="demoPopup">
 
-            <span class="close" onclick="closeModal()">&times;</span>
-
-            <h2>Request a Demo</h2>
-
-            <form id="demoForm">
-
-                <input type="text" id="name" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email Address" required>
-                <input type="text" placeholder="Farm Size / Location">
-
-                <p class="" id="formError"></p>
-
-                <button type="submit">Submit Request</button>
-
-            </form>
-
+        <!-- Header -->
+        <div class="popup-header">
+            <h3>Book a Demo</h3>
+            <span id="closeDemo">&times;</span>
         </div>
+
+        <!-- Form -->
+        <form class="demo-form" id="demoForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="phone" placeholder="Phone Number" required>
+
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Request Demo</button>
+
+            <div class="success-message" id="successMsg">
+                ✅ request submitted successfully!
+            </div>
+        </form>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

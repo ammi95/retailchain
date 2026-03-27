@@ -40,55 +40,45 @@ const tabs = document.querySelectorAll(".role-tab");
 const contents = document.querySelectorAll(".role-content");
 
 tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(t => t.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
+    tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
 
-    tab.classList.add("active");
-    document.getElementById(tab.dataset.role).classList.add("active");
-  });
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.role).classList.add("active");
+    });
 });
 
-const modal = document.getElementById("demoModal");
-const form = document.getElementById("demoForm");
-const error = document.getElementById("formError");
-const box = document.getElementById("modalBox");
+$(document).ready(function () {
+    $('.openDemo').on('click', function (e) {
+        e.preventDefault();
+        $('#demoPopup').addClass('active');
+        $('#demoOverlay').addClass('active');
+    });
 
-function openModal() {
-    document.getElementById("demoModal").style.display = "flex";
-}
-
-function closeModal() {
-    document.getElementById("demoModal").style.display = "none";
-}
-
-/* close outside */
-window.onclick = function (e) {
-    const modal = document.getElementById("demoModal");
-    if (e.target === modal) {
-        modal.style.display = "none";
+    // CLOSE POPUP
+    function closePopup() {
+        $('#demoPopup').removeClass('active');
+        $('#demoOverlay').removeClass('active');
     }
-}
 
-/* FORM VALIDATION */
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    $('#closeDemo, #demoOverlay').on('click', function () {
+        closePopup();
+    });
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+    // FORM SUBMIT
+    $('#demoForm').on('submit', function (e) {
+        e.preventDefault();
 
-    if (name === "" || email === "") {
-        error.innerText = "Please fill all required fields";
+        $('#successMsg').addClass('active');
+        this.reset();
 
-        box.classList.add("shake");
-        setTimeout(() => box.classList.remove("shake"), 300);
-    } else {
-        error.classList.add("success");
-        error.innerText = "✅ Request submitted successfully!";
-
-        form.reset();
-    }
-});
+        setTimeout(function () {
+            $('#successMsg').removeClass('active');
+            closePopup();
+        }, 5000);
+    });
+})
 
 
 

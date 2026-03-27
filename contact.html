@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - RetailChain Analytics Portal</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -26,13 +27,13 @@
                 <a href="contact.html">contact</a>
                 <div class="nav-actions mobile-cta">
                     <a href="login.html" class="login">Login</a>
-                    <a href="javacript:void(0)" class="btn-primary" onclick="openModal()">Request demo</a>
+                    <a href="javacript:void(0)" class="btn-primary openDemo">Request demo</a>
                 </div>
             </nav>
 
             <!-- Right Buttons -->
             <div class="nav-actions">
-                <a href="javacript:void(0)" class="btn-primary" onclick="openModal()">Request demo</a>
+                <a href="javacript:void(0)" class="btn-primary openDemo">Request demo</a>
                 <a href="login.html" class="login">Login</a>
             </div>
 
@@ -56,11 +57,14 @@
                 <p>We’d love to hear from you. Send us a message and we’ll respond quickly.</p>
 
                 <div class="contact-details">
-                    <div>📧 support@harvestpredict.com</div>
-                    <div>📍 India</div>
+                    <div>📧 contact@retailchain.com</div>
+                    <div>📍 RetailChain Analytics Ltd.
+                        70 Sir John Rogerson's Quay
+                        Grand Canal Dock, Dublin 2
+                        Ireland</div>
                 </div>
                 <div class="contact-extra">
-                    <div style="margin-bottom: 10px;">📞 +91 98765 43210</div>
+                    <!-- <div style="margin-bottom: 10px;">📞 +91 98765 43210</div> -->
                     <div>🕒 Mon - Fri: 9 AM - 6 PM</div>
                 </div>
             </div>
@@ -100,8 +104,10 @@
         </div>
     </section>
     <div class="contact-map">
-        <iframe src="https://www.google.com/maps?q=India&output=embed" loading="lazy">
-        </iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1733.6852027132356!2d-6.237495824514943!3d53.34542617479383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670eedbff7895b%3A0xa3d253fb0def968d!2sMatheson%20LLP!5e1!3m2!1sen!2sin!4v1774638429382!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <footer class="footer">
         <div class="footer-container">
@@ -112,15 +118,11 @@
                     <img src="assets/images/logo.png" alt="logo">
                 </div>
                 <p>
-                    Oritenga delivers real-time retail analytics, helping businesses make smarter decisions
+                    RetailChain delivers real-time retail analytics, helping businesses make smarter decisions
                     across sales, inventory, and promotions.
                 </p>
 
-                <div class="socials">
-                    <a href="#">🌐</a>
-                    <a href="#">💼</a>
-                    <a href="#">🐦</a>
-                </div>
+
             </div>
 
             <!-- Column 2 -->
@@ -150,30 +152,35 @@
 
         <!-- Bottom Bar -->
         <div class="footer-bottom">
-            <p>© 2026 Oritenga. All rights reserved</p>
+            <p>© 2026 RetailChain. All rights reserved</p>
         </div>
     </footer>
-    <div class="modal" id="demoModal">
+    <div class="demo-overlay" id="demoOverlay"></div>
 
-        <div class="modal-content" id="modalBox">
+    <!-- Side Popup -->
+    <div class="demo-popup" id="demoPopup">
 
-            <span class="close" onclick="closeModal()">&times;</span>
-
-            <h2>Request a Demo</h2>
-
-            <form id="demoForm">
-
-                <input type="text" id="name" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email Address" required>
-                <input type="text" placeholder="Farm Size / Location">
-
-                <p class="" id="formError"></p>
-
-                <button type="submit">Submit Request</button>
-
-            </form>
-
+        <!-- Header -->
+        <div class="popup-header">
+            <h3>Book a Demo</h3>
+            <span id="closeDemo">&times;</span>
         </div>
+
+        <!-- Form -->
+        <form class="demo-form" id="demoForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="phone" placeholder="Phone Number" required>
+
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Request Demo</button>
+
+            <div class="success-message" id="successMsg">
+                ✅ request submitted successfully!
+            </div>
+        </form>
 
     </div>
 
