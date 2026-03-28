@@ -96,7 +96,7 @@
                         <span class="loader"></span>
                     </button>
 
-                    <div id="successMsg"></div>
+                    <div id="successmsg"></div>
 
                 </form>
             </div>
@@ -170,39 +170,34 @@
         <form class="demo-form" id="demoForm">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
-            <input type="phone" maxlength="10" pattern="[0-9]{10}" placeholder="Phone Number" required>
-
-
+            <input type="phone" maxlength="10" id="phone" pattern="[0-9]{10}" placeholder="Phone Number" required>
             <textarea placeholder="Your Message"></textarea>
-
             <button type="submit">Request Demo</button>
-
             <div class="success-message" id="successMsg">
                 ✅ request submitted successfully!
             </div>
         </form>
-
     </div>
 
     <script src="assets/js/script.js"></script>
     <script>
+        document.getElementById("phone").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+
         const contactform = document.getElementById("contactForm");
         const loader = document.querySelector(".loader");
         const btnText = document.querySelector(".btn-text");
 
         contactform.addEventListener("submit", function (e) {
             e.preventDefault();
-
             let valid = true;
-
             const name = document.getElementById("name");
             const email = document.getElementById("email");
             const message = document.getElementById("message");
-            const successMsg = document.getElementById("successMsg");
-
+            const successMsg = document.getElementById("successmsg");
             document.querySelectorAll(".error").forEach(e => e.innerText = "");
             successMsg.innerText = "";
-
             if (name.value.trim() === "") {
                 showError(name, "Required");
                 valid = false;

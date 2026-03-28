@@ -34,7 +34,7 @@
 
             <!-- Right Buttons -->
             <div class="nav-actions">
-                <a href="javacript:void(0)" class="btn-primary openDemo" >Request demo</a>
+                <a href="javacript:void(0)" class="btn-primary openDemo">Request demo</a>
                 <a href="login.html" class="login">Login</a>
             </div>
 
@@ -146,7 +146,7 @@
             <p>© 2026 RetailChain. All rights reserved</p>
         </div>
     </footer>
-  <div class="demo-overlay" id="demoOverlay"></div>
+    <div class="demo-overlay" id="demoOverlay"></div>
 
     <!-- Side Popup -->
     <div class="demo-popup" id="demoPopup">
@@ -161,7 +161,7 @@
         <form class="demo-form" id="demoForm">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
-            <input type="phone" maxlength="10" pattern="[0-9]{10}" placeholder="Phone Number" required>
+            <input type="phone" maxlength="10" id="phone" pattern="[0-9]{10}" placeholder="Phone Number" required>
 
 
             <textarea placeholder="Your Message"></textarea>
@@ -175,6 +175,11 @@
 
     </div>
     <script src="assets/js/script.js"></script>
+    <script>
+        document.getElementById("phone").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    </script>
 </body>
 
 </html>

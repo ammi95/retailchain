@@ -332,7 +332,7 @@
 
                     <div class="role-content active" id="store">
                         <h3>Store-Level Intelligence</h3>
-                        <p >📊 Live Sales + Stock Alerts UI</p>
+                        <p>📊 Live Sales + Stock Alerts UI</p>
                         <div class="preview" style="padding: 10px;">
                             Monitor daily sales performance with real-time updates across all products.
                             Get instant alerts for low stock and fast-moving items to avoid missed sales.
@@ -344,7 +344,7 @@
                     <div class="role-content" id="regional">
                         <h3>Multi-Store Visibility</h3>
                         <p>📍 Regional Performance Dashboard</p>
-                        <div class="preview"  style="padding: 10px;">
+                        <div class="preview" style="padding: 10px;">
                             Compare performance across multiple stores and regions in a single dashboard.
                             Identify top-performing locations and areas that need attention instantly.
                             Analyze regional trends, sales patterns, and inventory distribution.
@@ -355,7 +355,7 @@
                     <div class="role-content" id="hq">
                         <h3>Strategic Insights</h3>
                         <p>🏢 Executive BI Dashboard</p>
-                        <div class="preview"  style="padding: 10px;">
+                        <div class="preview" style="padding: 10px;">
                             Access organization-wide analytics with complete visibility across all stores.
                             Measure promotion effectiveness and forecast demand with advanced insights.
                             Track key business metrics to support long-term strategic planning.
@@ -429,9 +429,7 @@
         <form class="demo-form" id="demoForm">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
-            <input type="phone" maxlength="10" pattern="[0-9]{10}" placeholder="Phone Number" required>
-
-
+            <input type="tel" maxlength="10" id="phone" pattern="[0-9]{10}" placeholder="Phone Number" required>
             <textarea placeholder="Your Message"></textarea>
 
             <button type="submit">Request Demo</button>
@@ -445,6 +443,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        document.getElementById("phone").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    </script>
 
 </body>
 
